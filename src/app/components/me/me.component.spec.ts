@@ -42,4 +42,9 @@ describe('MeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render title', () => {
+     const compiled = fixture.debugElement.nativeElement;
+     expect(compiled.querySelector('h1').textContent).toContain('User information');
+  })
 });
